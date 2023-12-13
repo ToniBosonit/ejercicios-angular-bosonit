@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="child">
+    <h1>Child</h1>
+    <p *ngIf="serviceMessageChild !== '' ">Message: {{ serviceMessageChild | uppercase}} </p>
+    <p *ngIf=" message !== '' ">Message: {{ message | uppercase}} </p>
+    <p *ngIf="obsMessage !== '' " >Message: {{ obsMessage | uppercase}} </p>
+
+
+
+
+
+
+
+    <div class="container">
+      <button (click)="emitMessageFather()" class="btn"> {{ buttons[0] | titlecase }} </button>
+      <button (click)="emitOutputFather()" class="btn"> {{ buttons[1] | titlecase }} </button>
+      <button (click)="obsMessageFather()" class="btn"> {{ buttons[2] | titlecase }} </button>
+    </div>
+
+  </div>
+
+
+
+</div>

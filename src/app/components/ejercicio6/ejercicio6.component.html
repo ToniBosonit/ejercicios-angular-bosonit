@@ -1,0 +1,31 @@
+<p class="number">Ejercicio 6</p>
+
+<h1>Gráficas con datos de una api pública</h1>
+
+<div class="container">
+
+  <div class="canvas">
+
+    <!--Spinner-->
+    <div class="container" *ngIf="this.barChartData.datasets[0].data.length === 0">
+      <img  src="./../../../assets/oval.svg" alt="loading"><br>
+    </div>
+
+    <div class="container" *ngIf="this.barChartData.datasets[0].data.length === 0">
+      <p>Loading...</p>
+    </div>
+
+
+    <canvas *ngIf="this.barChartData.datasets[0].data.length > 0" class="chart" baseChart [data]="barChartData"
+      [options]="barChartOptions" [type]="barChartType" (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)">
+    </canvas>
+
+
+<!--
+    <button *ngIf="this.barChartData.datasets[0].data.length > 0" (click)="update()" class="update">Actualizar
+      datos</button> -->
+
+  </div>
+
+</div>

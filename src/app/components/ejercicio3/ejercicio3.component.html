@@ -1,0 +1,45 @@
+<!--Formulario-->
+<form action="" (ngSubmit)="savePerson( persons )">
+
+  <p class="number">Ejercicio 3</p>
+
+  <h2>Formulario de registro</h2>
+
+  <label for="nombre">Nombre de usuario <br> <input type="text" [(ngModel)]="persons.user" name="user"
+      id="usuario"></label><br>
+
+  <label for="contraseña">Contraseña <br> <input type="password" [(ngModel)]="persons.password" name="password"
+      id="contraseña"></label><br>
+
+  <label for="confirmar">Confirmar Contraseña <br> <input type="password" [(ngModel)]="persons.confirm" name="confirm"
+      id="confirmar"></label><br>
+
+  <label for="email">Email <br> <input type="email" [(ngModel)]="persons.email" name="email" id="email"></label><br>
+
+  <label for="checkbox"> <input type="checkbox" [(ngModel)]="persons.suscriber" name="suscriber" id="checkbox">Ofertas
+    promocionales</label><br>
+
+  <label for="pais">País
+    <select name="pais" [(ngModel)]="persons.country" name="country" id="pais">
+      <option value="" selected>Elegir país</option>
+      <option *ngFor="let pais of paises" [value]="pais.name.common"> {{ pais.name.common | uppercase }} </option>
+    </select>
+  </label><br>
+
+  <label for="ciudad">Ciudad <br> <input type="text" [(ngModel)]="persons.city" name="city" id="ciudad"></label><br>
+
+  <button type="submit">Crear</button>
+
+
+
+  <button type="button" (click)="cleanForm()">Reiniciar</button>
+
+
+
+
+</form>
+
+
+
+<!--Tabla-->
+<app-tabla [personsFormChild]="personsFormFather" (indexToEdit)="receiveIndexChild( $event )"></app-tabla>

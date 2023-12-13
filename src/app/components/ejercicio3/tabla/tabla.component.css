@@ -1,0 +1,50 @@
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.table {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  box-shadow: 1px 1px 4px 1px grey;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 3px;
+
+}
+
+.icon {
+  width: 18px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+.trash-icon{
+  width: 25px;
+  cursor: pointer;
+}
+
+th, td{
+  width: 100%;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.suscriber{
+  margin-left: 55px;
+  width: 30px;
+}
+
+.title-suscriber{
+  padding-left: 45px;
+}
+

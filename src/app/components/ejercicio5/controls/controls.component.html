@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Control del semáforo</h1>
+
+  <select name="semaforo" id="semaforo" [(ngModel)]="stateColor" (change)="changeColor()">
+    <option value="">Seleccionar color</option>
+    <option value="red">Rojo</option>
+    <option value="yellow">Amarillo</option>
+    <option value="green">Verde</option>
+  </select>
+
+
+  <div class="active">
+    <input type="checkbox" id="active" [(ngModel)]="active" (change)="activateTraficLight()">
+    <label for="active">Activar semáforo</label>
+  </div>
+
+
+  <div class="btn">
+    <button (click)="automatic()">On/Off automático</button>
+  </div>
+
+
+</div>

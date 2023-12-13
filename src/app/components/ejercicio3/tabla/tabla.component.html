@@ -1,0 +1,44 @@
+<!--Tabla-->
+<div class="table-container">
+  <table class="table">
+
+    <tr class="row" *ngIf="personsFormChild.length > 0; else sinRegistros">
+      <td class="title">Usuario</td>
+      <td class="title">Correo</td>
+      <td class="title title-suscriber">Suscrito</td>
+      <td class="title">País</td>
+      <td class="title">Ciudad</td>
+      <td class="title">Actions</td>
+    </tr>
+
+    <ng-template #sinRegistros>
+      <tr class="row"><b>No hay registros</b></tr>
+    </ng-template>
+
+
+    <tr class="row" *ngFor="let person of personsFormChild" >
+
+      <td> {{person.user | titlecase}} </td>
+      <td> {{person.email}} </td>
+      <td> <img class="suscriber" *ngIf=" person.suscriber" src="https://cdn-icons-png.flaticon.com/512/100/100470.png" alt="check"> </td>
+      <td> {{person.country | titlecase}}</td>
+      <td> {{person.city | titlecase}}</td>
+      <td>
+        <img class="icon" (click)="editPerson( person )" src="https://cdn-icons-png.flaticon.com/512/5840/5840899.png" alt="edit info" title="edit">
+
+        <img class="icon trash-icon" (click)="deletePerson( person )" src="https://cdn.icon-icons.com/icons2/390/PNG/512/trash-can_38501.png" alt="clear info" title="delete">
+
+      </td>
+    </tr>
+
+
+
+  </table>
+
+
+
+</div>
+
+
+
+

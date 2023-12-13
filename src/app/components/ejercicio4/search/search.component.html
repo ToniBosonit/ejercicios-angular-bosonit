@@ -1,0 +1,38 @@
+<p class="number">Ejercicio 4</p>
+
+
+<h1>Buscador de universidades</h1>
+
+<div class="container">
+  <ul>
+
+    <li (click)="valueCountry('spain')" [ngClass]="{'active': country === 'spain'}">España</li>
+    <li  (click)="valueCountry('united kingDom')" [ngClass]="{'active': country === 'united kingDom'}">Londres</li>
+    <li  (click)="valueCountry('portugal')" [ngClass]="{'active': country === 'portugal'}">Portugal</li>
+
+
+    <input
+      type="text"
+      placeholder="Buscar..."
+      (keyup)="searchUniversity( text.value )"
+      #text
+      id="text"
+
+    >
+
+  </ul>
+
+  <div class="results" *ngIf="results.length !== 0">
+    <p> {{ results.length }} resultados </p>
+  </div>
+
+  <div class="results" *ngIf="country === '' ">
+    <p> Selecciona un país para empezar la búsqueda</p>
+  </div>
+
+
+</div>
+
+<app-list [list]="results" ></app-list>
+
+

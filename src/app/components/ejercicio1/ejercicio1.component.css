@@ -1,0 +1,38 @@
+.ejercicio-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.ejercicio-1 > img {
+  width: 600px;
+}
+
+.btn-menu{
+  margin: 50px;
+  width: 150px;
+  border-radius: 10px;
+  border: solid 1px #22c55e;
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.btn-menu:hover{
+  transform: scale(1.05);
+}
+
+img {
+  border-radius: 10px;
+  /* border: 2px solid #22c55e; */
+}
+
+.number {
+  margin: 20px;
+  background-color: #0096ff;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}

@@ -1,0 +1,26 @@
+
+.header-container{
+  background-color: #3b82f6;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-menu{
+  margin: 20px;
+  width: 150px;
+  border-radius: 10px;
+  border: solid 1px #22c55e;
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-menu:hover{
+  background-color: white;
+  color: #22c55e;
+  transform: scale(1.05);
+}
+
+

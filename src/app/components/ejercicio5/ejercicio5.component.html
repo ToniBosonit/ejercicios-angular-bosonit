@@ -1,0 +1,24 @@
+<p class="number">Ejercicio 5</p>
+
+<div class="container">
+
+  <div class="trafic-light">
+    <div class="light" [ngClass]="{'red': onOff === true && colorTraficLight === 'red'   }">
+      <!--rojo-->
+    </div>
+    <br>
+    <div class="light" [ngClass]="{'yellow': onOff === true && colorTraficLight === 'yellow'   }">
+      <!--amarillo-->
+    </div>
+    <br>
+    <div class="light" [ngClass]="{'green': onOff === true && colorTraficLight === 'green'   }">
+      <!--verde-->
+    </div>
+  </div>
+
+  <br>
+
+  <!--Control del semáforo-->
+  <controls (stateTraffic)="receiveOnOff($event)" (selectState)="receiveColor($event)"></controls>
+
+</div>

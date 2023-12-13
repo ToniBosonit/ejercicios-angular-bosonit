@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+}
+
+.child{
+  border: 1px solid #22C55E;
+  width: 75%;
+  height: 250px;
+  border-radius: 10px;
+  background-color: #8ee7af;
+  padding-bottom: 20px;
+}
+
+.child > h1 {
+  margin-left: 40px;
+}
+
+.child > p {
+  text-align: center;
+}
+
+.btn{
+  margin: 50px;
+  width: 160px;
+  border-radius: 10px;
+  border: solid 1px #22c55e;
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  padding: 10px;;
+}
+
+.btn:hover{
+  transform: scale(1.05);
+}

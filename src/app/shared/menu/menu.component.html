@@ -1,0 +1,16 @@
+<!-- <div class="header-container">
+  <button (click)="navegar('ejercicio1')" class="btn-menu"> {{ itemsMenu[0] | titlecase }} </button>
+  <button (click)="navegar('ejercicio2')" class="btn-menu"> {{ itemsMenu[1] | titlecase }} </button>
+  <button  (click)="navegar('ejercicio3')" class="btn-menu"> {{ itemsMenu[2] | titlecase }} </button>
+  <button class="btn-menu"> {{ itemsMenu[3] | titlecase }} </button>
+  <button class="btn-menu"> {{ itemsMenu[4] | titlecase }} </button>
+  <button class="btn-menu"> {{ itemsMenu[5] | titlecase }} </button>
+  <button class="btn-menu"> {{ itemsMenu[6] | titlecase }} </button>
+</div> -->
+
+
+
+<p-menubar [model]="items" routerLinkActive="active">
+  <ng-template pTemplate="start">
+    <img class="icon"  src="../../../assets/favicon.png" height="40" class="mr-2" alt="Bosonit" title="Bosonit" />
+</ng-template></p-menubar>

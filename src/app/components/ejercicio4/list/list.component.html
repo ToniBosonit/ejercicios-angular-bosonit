@@ -1,0 +1,5 @@
+  <ul>
+    <li *ngFor="let item of list"> {{ item.name }} <a [href]="'https://www.' + item.domains" target="_blank"> Más</a> </li>
+    <li *ngIf="list.length === 0"> No hay resultados </li>
+  </ul>
+

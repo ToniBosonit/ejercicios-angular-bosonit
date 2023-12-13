@@ -1,0 +1,30 @@
+<p class="number">Ejercicio 2</p>
+
+
+  <div class="container">
+
+    <div class="parent">
+      <h1>Parent</h1>
+      <p *ngIf="serviceMessageFather !== '' ">Message: {{ serviceMessageFather | uppercase}} </p>
+      <p *ngIf="outPutMessageFather !== '' ">Message: {{ outPutMessageFather | uppercase}} </p>
+      <p *ngIf="obsMessageFather !== '' ">Message: {{ obsMessageFather | uppercase}} </p>
+
+      <div class="container">
+        <button class="btn" (click)="serviceMessage()" > {{ buttons[0] | titlecase }} </button>
+        <button class="btn"  (click)="emitInputChildMessage()" > {{ buttons[1] | titlecase }} </button>
+        <button class="btn" (click)="obsMessage()" > {{ buttons[2] | titlecase }} </button>
+      </div>
+
+
+
+      <app-child [message]=" inputMessageChild " (outputMessageFather)="emitMessageFather($event)" ></app-child>
+
+    </div>
+
+
+  </div>
+
+
+
+
+

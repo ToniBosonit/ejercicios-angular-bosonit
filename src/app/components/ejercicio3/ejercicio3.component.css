@@ -1,0 +1,107 @@
+form{
+  width: 300px;
+  height: 120vh;
+  background-color: rgb(222, 235, 205);
+  padding: 15px;
+  float: left;
+}
+
+h2 {
+  margin-top: -5px;
+}
+
+input {
+  width: 95%;
+  height: 25px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+
+input:hover, select:hover{
+  border: 1px solid #22c55e;
+  /* box-shadow: 1px 1px 20px 1px #22c55e; */
+}
+
+
+input[type='checkbox']{
+  width: 18px;
+  margin-left: 0;
+}
+
+label[for='checkbox']:checked{
+  border: 1px solid #22c55e;
+}
+
+
+label {
+  font-size: 20px;
+}
+select {
+  width: 95%;
+  height: 32px;
+  margin-bottom: 20px;
+
+}
+
+button{
+  width: 98%;
+  height: 30px;
+  background-color: #22c55e;
+  border: solid 1px #22c55e;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+button:hover{
+  background-color: white;
+  color: #22c55e;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.table {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  box-shadow: 1px 1px 4px 1px grey;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 3px;
+
+}
+
+.icon {
+  width: 18px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+.trash-icon{
+  width: 25px;
+  cursor: pointer;
+}
+
+.number {
+  margin: 5px;
+  margin-bottom: 30px;
+  background-color: #0096ff;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+
+
+
+

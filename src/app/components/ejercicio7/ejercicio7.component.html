@@ -1,0 +1,36 @@
+<p class="number">Ejercicio 7</p>
+
+<div class="main-container">
+
+  <div class="container">
+
+    <h2>Contador</h2>
+    <div class="count">
+      <h1> {{ count }} </h1>
+    </div>
+
+    <p>Setup</p>
+    <div class="buttons">
+      <button class="btn" (click)="startCount()">start</button>
+      <button class="btn" (click)="pauseCount()">pause</button>
+      <button class="btn" (click)="resetCount()">reset</button>
+    </div>
+
+    <p>Count</p>
+    <div class="buttons">
+      <button (click)="countUp()" class="btn">count up</button>
+      <button (click)="countDown()" class="btn">count down</button>
+    </div>
+
+    <p>Set to</p>
+    <input type="number" [(ngModel)]="miCount.value" (change)="setTo()">
+
+    <p>Step</p>
+    <input type="number" [(ngModel)]="miCount.step">
+
+  </div>
+
+
+</div>
+
+{{ miCount | json }}
