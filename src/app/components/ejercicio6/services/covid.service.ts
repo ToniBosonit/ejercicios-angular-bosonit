@@ -10,16 +10,10 @@ export class CovidService {
 
   constructor( private http: HttpClient) { }
 
-
   loadData(): Observable <Covid[]> {
-
     const url: string = 'https://disease.sh/v3/covid-19/countries';
-
-    return this.http.get<Covid[]>( url ).pipe(
-
+      return this.http.get<Covid[]>( url ).pipe(
     );
-
   }
-
 
 }
