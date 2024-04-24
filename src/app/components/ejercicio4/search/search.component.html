@@ -23,7 +23,8 @@
   </ul>
 
   <div class="results" *ngIf="results.length !== 0">
-    <p> {{ results.length }} resultados </p>
+    <p *ngIf="results.length === 1"> {{ results.length }} resultado </p>
+    <p *ngIf="results.length > 1"> {{ results.length }} resultados </p>
   </div>
 
   <div class="results" *ngIf="country === '' ">

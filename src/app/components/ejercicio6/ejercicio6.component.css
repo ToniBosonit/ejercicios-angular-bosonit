@@ -41,6 +41,13 @@ h1 {
   border: none;
 }
 
+.update:hover {
+  color: #0096ff;
+  background-color: white;
+  border: solid 1px #0096ff;
+
+}
+
 .canvas {
   width: 60%;
 }

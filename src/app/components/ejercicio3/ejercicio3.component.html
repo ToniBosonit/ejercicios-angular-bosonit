@@ -28,7 +28,8 @@
 
   <label for="ciudad">Ciudad <br> <input type="text" [(ngModel)]="persons.city" name="city" id="ciudad"></label><br>
 
-  <button type="submit">Crear</button>
+  <button type="submit" *ngIf="editMode === true">Actualizar</button>
+  <button type="submit" *ngIf="editMode === false">Crear</button>
 
 
 
@@ -40,6 +41,9 @@
 </form>
 
 
-
 <!--Tabla-->
-<app-tabla [personsFormChild]="personsFormFather" (indexToEdit)="receiveIndexChild( $event )"></app-tabla>
+<app-tabla [personsFormChild]="personsFormFather" (indexToEdit)="receiveIndexChild( $event )" (editMode)="receiveEditMode($event)"></app-tabla>
+
+
+<p class="error-message" *ngIf="error">Rellene todos los campos</p>
+<p class="yellow" *ngIf="passwordError">Las contraseñas no coinciden</p>
